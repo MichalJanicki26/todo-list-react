@@ -1,0 +1,52 @@
+.tasks {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.tasks__item {
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 1fr auto;
+    gap: 15px;
+    border-bottom: 2px solid whitesmoke;
+}
+
+/* .tasks__item--hidden {
+
+} */
+
+.tasks__checkedButton {
+    margin: 5px;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(0, 130, 0);
+    border: none;
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.tasks__uncheckedButton:hover {
+    background-color: rgb(0, 80, 0);
+}
+
+.tasks__removeButton {
+    margin: 5px;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(250, 0, 0);
+    border: none;
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    justify-self: end;;
+}
+
+.tasks__removeButton:hover {
+    background-color: rgb(200, 0, 0);
+}
+
+.tasks__content--done {
+    text-decoration: line-through;
+}

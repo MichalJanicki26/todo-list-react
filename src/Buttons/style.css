@@ -1,0 +1,30 @@
+.buttons {
+    justify-self: flex-end;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.buttons__button {
+    border: none;
+    background: none;
+    color: teal;
+    font-size: 14pt;
+    transition: 1s;
+}
+
+.buttons__button:hover {
+    color: rgb(0, 188, 188);
+}
+
+.buttons__button:active {
+    color: rgb(0, 88, 88);
+}
+
+.buttons__button--disabled {
+    border: none;
+    background: none;
+    color: lightgray;
+    font-size: 14pt;
+}
