@@ -1,5 +1,7 @@
 .buttons {
+    margin: 10px;
     justify-self: flex-end;
+    align-items: center;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -9,7 +11,7 @@
 .buttons__button {
     border: none;
     background: none;
-    color: teal;
+    color: rgb(0, 128, 128);
     font-size: 14pt;
     transition: 1s;
 }
@@ -19,10 +21,10 @@
 }
 
 .buttons__button:active {
-    color: rgb(0, 88, 88);
+    color: rgb(0, 48, 48);
 }
 
-.buttons__button--disabled {
+.buttons__button:disabled {
     border: none;
     background: none;
     color: lightgray;
