@@ -5,6 +5,10 @@ import Section from "./Section";
 import Form from "./Form";
 import Buttons from "./Buttons";
 import Tasks from "./Tasks";
+import * as hello from "./utils/hello";
+
+hello.hello();
+console.log(hello.name);
 
 const tasks = [
   { id: 1, content: "przejść na Reacta", done: false },
