@@ -11,8 +11,6 @@ const tasks = [
   { id: 2, content: "zjeść kolację", done: true },
 ];
 
-
-
 function App() {
   const [hideDone, setHideDone] = useState(false);
 

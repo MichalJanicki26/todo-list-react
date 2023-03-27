@@ -12,9 +12,9 @@
     border-bottom: 2px solid whitesmoke;
 }
 
-/* .tasks__item--hidden {
+.tasks__item--hidden {
     display: none;
-} */
+}
 
 .tasks__checkedButton {
     margin: 5px;
