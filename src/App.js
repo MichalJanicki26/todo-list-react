@@ -8,17 +8,29 @@ import Tasks from "./Tasks";
 
 function App() {
   const [hideDone, setHideDone] = useState(false);
+
   const [tasks, setTasks] = useState([
     { id: 1, content: "przejść na Reacta", done: false },
-    { id: 2, content: "zjeść kolację", done: true },
+    { id: 2, content: "zjeść kolację", done: false },
   ]);
-  const removeTask = (id) => {
-    setTasks(tasks => tasks.filter(task => task.id !== id));
-  };
 
   const toggleHideDone = () => {
     setHideDone(hideDone => !hideDone);
   };
+
+  const removeTask = (id) => {
+    setTasks(tasks => tasks.filter(task => task.id !== id));
+  };
+
+  const toggleTaskDone = (id) => {
+    setTasks(tasks => tasks.map(task => {
+      if (task.id === id) {
+        return {...task, done: !task.done };
+      }
+
+      return task;
+    }));
+  }
 
   return (
     <Container>
@@ -44,6 +56,7 @@ function App() {
             tasks={tasks}
             hideDone={hideDone}
             removeTask={removeTask}
+            toggleTaskDone={toggleTaskDone}
           />}
       />
     </Container>
