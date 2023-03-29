@@ -25,7 +25,7 @@ function App() {
   const toggleTaskDone = (id) => {
     setTasks(tasks => tasks.map(task => {
       if (task.id === id) {
-        return {...task, done: !task.done };
+        return { ...task, done: !task.done };
       }
 
       return task;
@@ -33,7 +33,11 @@ function App() {
   };
 
   const setAllDone = () => {
-    setTasks(tasks => tasks.map(task => ({...task, done: true})));
+    setTasks(tasks => tasks.map(task => ({ ...task, done: true })));
+  };
+
+  const addNewTask = (content) => {
+    setTasks(tasks => [...tasks, { content, done: false, id: tasks.length ? tasks[tasks.length - 1].id + 1 : 1, },]);
   };
 
   return (
@@ -44,7 +48,9 @@ function App() {
 
       <Section
         title="Dodaj nowe zadanie"
-        body={<Form />}
+        body={<Form
+          addNewTask={addNewTask}
+        />}
       />
 
       <Section
